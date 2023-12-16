@@ -1,9 +1,11 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.myapplication.Quiz.Question
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -100,6 +102,50 @@ class DatabaseHelper(private val context: Context) :
         return database?.rawQuery(sqlQuery, null)
     }
 
+    @SuppressLint("Range")
+    fun getQuizQuestions(): List<Question> {
+        val quizQuestions = mutableListOf<Question>()
+
+        // 選取 Listen_1 的十題
+        val columnNo = "No"
+        val minNoValue = 10
+        val cursorListen1 = database?.rawQuery("SELECT * FROM Listen_1 WHERE $columnNo < $minNoValue ORDER BY RANDOM() LIMIT 5", null)
+        cursorListen1?.use {
+            while (it.moveToNext()) {
+                val question = Question(
+                    it.getInt(it.getColumnIndex("No")),
+                    it.getString(it.getColumnIndex("Questions")),
+                    it.getString(it.getColumnIndex("Option_1")),
+                    it.getString(it.getColumnIndex("Option_2")),
+                    it.getString(it.getColumnIndex("Option_3")),
+                    it.getString(it.getColumnIndex("Answer")),
+                    it.getInt(it.getColumnIndex("HasPic")),
+                    ""
+                )
+                quizQuestions.add(question)
+            }
+        }
+
+        // 選取 Listen_2 的十題
+        val cursorListen2 = database?.rawQuery("SELECT * FROM Listen_2 ORDER BY RANDOM() LIMIT 5", null)
+        cursorListen2?.use {
+            while (it.moveToNext()) {
+                val question = Question(
+                    it.getInt(it.getColumnIndex("No")),
+                    it.getString(it.getColumnIndex("Questions")),
+                    it.getString(it.getColumnIndex("Option_1")),
+                    it.getString(it.getColumnIndex("Option_2")),
+                    it.getString(it.getColumnIndex("Option_3")),
+                    it.getString(it.getColumnIndex("Answer")),
+                    it.getInt(it.getColumnIndex("HasPic")),
+                    ""
+                )
+                quizQuestions.add(question)
+            }
+        }
+
+        return quizQuestions
+    }
     // 目前還沒需要建立其他資料庫
     override fun onCreate(db: SQLiteDatabase?) {}
 

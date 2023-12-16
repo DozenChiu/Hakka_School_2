@@ -1,11 +1,14 @@
-package com.example.myapplication
+package com.example.myapplication.Quiz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.myapplication.R
 
-class Quiz_Process : AppCompatActivity() {
+class Quiz_History : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_process)
+        setContentView(R.layout.activity_quiz_history)
+
+
     }
 }
