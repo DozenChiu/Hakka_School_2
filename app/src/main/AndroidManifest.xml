@@ -25,13 +25,13 @@
             android:name=".Trace"
             android:exported="false" />
         <activity
-            android:name=".Reading"
+            android:name=".Listen.Reading"
             android:exported="false" />
         <activity
-            android:name=".ListenOne"
+            android:name=".Listen.ListenOne"
             android:exported="false" />
         <activity
-            android:name=".ListenTwo"
+            android:name=".Listen.ListenTwo"
             android:exported="false" />
         <activity
             android:name=".QuestionBank"
