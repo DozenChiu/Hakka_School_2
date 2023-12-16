@@ -4,10 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toolbar
+import com.example.myapplication.vocab.Learning_Vocab
 
 class Learning_Area : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")

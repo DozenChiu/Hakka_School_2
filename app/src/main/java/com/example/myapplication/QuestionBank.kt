@@ -27,8 +27,8 @@ class QuestionBank : AppCompatActivity() {
             val intent = Intent(this, Reading::class.java)
             startActivity(intent)
         }
-        val BackImage = findViewById<ImageView>(R.id.backImage)
-        BackImage.setOnClickListener {
+        val backImage = findViewById<ImageView>(R.id.backImage)
+        backImage.setOnClickListener {
             finish() // 回到上一頁
         }
     }

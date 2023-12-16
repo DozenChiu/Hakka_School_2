@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Hakka School</string>
+
+    <string-array name="wordType">
+        <item>全部</item>
+        <item>1. 人體與醫療</item>
+        <item>2. 心理活動與感覺</item>
+        <item>3. 外在活動與動作</item>
+        <item>4. 事物狀態與變化</item>
+        <item>5. 抽象概念與形容</item>
+        <item>6. 社會關係與行為</item>
+        <item>7. 居家生活</item>
+        <item>8. 生物</item>
+        <item>9. 自然與景觀</item>
+        <item>10. 法律、政治與軍事</item>
+        <item>11. 通訊、建設與交通</item>
+        <item>12. 職業與經濟</item>
+        <item>13. 藝文與教育</item>
+        <item>14. 歲時祭儀、習俗與宗教</item>
+        <item>15. 代詞</item>
+        <item>16. 數詞量詞</item>
+        <item>17. 特殊詞類</item>
+        <item>18. 時空與情狀副詞</item>
+    </string-array>
 </resources>
