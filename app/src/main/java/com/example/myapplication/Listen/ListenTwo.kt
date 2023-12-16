@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Listen
 
 import android.annotation.SuppressLint
 import android.database.Cursor
@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.DatabaseHelper
+import com.example.myapplication.R
 
 class ListenTwo : AppCompatActivity() {
     var ShowAnswerBoolean: Boolean = false

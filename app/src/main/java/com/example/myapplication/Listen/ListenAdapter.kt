@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Listen
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Switch
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 
 
 // ListenAdapter.kt，是用來將資料從資料庫綁定至 RecyclerView 的各個項目中。
