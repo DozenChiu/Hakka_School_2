@@ -8,14 +8,6 @@
     tools:context=".ListenOne"
     android:background="@color/aqua">
 
-    <ImageView
-        android:id="@+id/backImage"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:src="@drawable/baseline_arrow_back_24"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -22,11 +22,6 @@ class ListenOne : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listenone)  // 設定畫面
 
-        val BackImage = findViewById<ImageView>(R.id.backImage)
-        BackImage.setOnClickListener {
-            finish() // 回到上一頁
-        }
-
         dbHelper = DatabaseHelper(this)     // 初始化 DatabaseHelper
         cursor = dbHelper.getListen1Data()         // 取得資料表資料Listen_1
         //cursor = dbHelper.getListen2Data()          取得資料表資料Listen_2

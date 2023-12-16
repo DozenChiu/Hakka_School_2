@@ -27,10 +27,5 @@ class Learning_Area : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val BackImage = findViewById<ImageView>(R.id.backImage)
-        BackImage.setOnClickListener {
-            finish() // 回到上一頁
-        }
-
     }
 }

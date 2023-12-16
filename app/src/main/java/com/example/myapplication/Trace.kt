@@ -9,10 +9,6 @@ class Trace : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trace)
 
-        val BackImage = findViewById<ImageView>(R.id.backImage)
-        BackImage.setOnClickListener {
-            finish() // 回到上一頁
-        }
     }
 
 }

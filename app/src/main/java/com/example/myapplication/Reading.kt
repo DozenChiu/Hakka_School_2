@@ -10,9 +10,5 @@ class Reading : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reading)
-        val BackImage = findViewById<ImageView>(R.id.backImage)
-        BackImage.setOnClickListener {
-            finish() // 回到上一頁
-        }
     }
 }

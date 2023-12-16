@@ -14,10 +14,6 @@ class Quiz_Area : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_area)
 
-        val BackImage = findViewById<ImageView>(R.id.backImage)
-        BackImage.setOnClickListener {
-            finish() // 回到上一頁
-        }
         val StartQuizBTN = findViewById<Button>(R.id.startquizBTN)
         StartQuizBTN.setOnClickListener {
             val intent = Intent(this, Quiz_Process::class.java)
