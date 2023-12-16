@@ -81,6 +81,25 @@ class DatabaseHelper(private val context: Context) :
         return database?.query("Listen_2", null, null, null, null, null, "No")
     }
 
+    // 對 wordList 資料表的操作
+    fun getWordListData(type: Int): Cursor? {
+        val tableName = "wordList"
+        val cate = "category"
+        var string = "SELECT * FROM $tableName"
+        if(type != 0)
+            string = "SELECT * FROM $tableName WHERE $cate = $type"
+        val sqlQuery = string
+        return database?.rawQuery(sqlQuery, null)
+    }
+
+    fun searchInDatabase(vocab: String?) : Cursor? {
+        val tableName = "wordList"
+        val word = "Word"
+        val mean = "Meaning"
+        val sqlQuery = "SELECT * FROM $tableName WHERE $mean LIKE '%$vocab%'"
+        return database?.rawQuery(sqlQuery, null)
+    }
+
     // 目前還沒需要建立其他資料庫
     override fun onCreate(db: SQLiteDatabase?) {}
 

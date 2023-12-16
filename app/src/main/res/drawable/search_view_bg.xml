@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--搜尋列外框-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corner android:radius="8dp"/>
+    <stroke android:color="@color/white"
+        android:width="2dp"/>
+</shape>
