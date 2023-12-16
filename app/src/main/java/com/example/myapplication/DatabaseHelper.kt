@@ -82,6 +82,9 @@ class DatabaseHelper(private val context: Context) :
     fun getListen2Data(): Cursor? {
         return database?.query("Listen_2", null, null, null, null, null, "No")
     }
+    fun getReadingData(): Cursor? {
+        return database?.query("Listen_2", null, null, null, null, null, "No")
+    }
 
     // 對 wordList 資料表的操作
     fun getWordListData(type: Int): Cursor? {
