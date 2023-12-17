@@ -71,19 +71,21 @@ class DatabaseHelper(private val context: Context) :
     // 這邊就可以寫對 Listen_1 資料表的操作
     fun getListen1Data(): Cursor? {
         val tableName = "Listen_1"
-        val columnNo = "No"
-        val minNoValue = 10
         //這邊是要下sql指令，(舉例用的)
-        val sqlQuery = "SELECT * FROM $tableName WHERE $columnNo > $minNoValue"
+        val sqlQuery = "SELECT * FROM $tableName"
         return database?.rawQuery(sqlQuery, null)
     }
 
     // 這邊就可以寫對 Listen_2 資料表的操作
     fun getListen2Data(): Cursor? {
-        return database?.query("Listen_2", null, null, null, null, null, "No")
+        val tableName = "Listen_2"
+        val sqlQuery = "SELECT * FROM $tableName"
+        return database?.rawQuery(sqlQuery, null)
     }
     fun getReadingData(): Cursor? {
-        return database?.query("Reading", null, null, null, null, null, "No")
+        val tableName = "Reading"
+        val sqlQuery = "SELECT * FROM $tableName"
+        return database?.rawQuery(sqlQuery, null)
     }
 
     // 對 wordList 資料表的操作
