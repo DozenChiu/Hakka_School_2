@@ -33,11 +33,11 @@ class Quiz_Process : AppCompatActivity() {
             val totalQuestions = quizAdapter.itemCount
             val accuracy = (correctAnswers.toDouble() / totalQuestions) * 100
             //val accuracy = correctAnswers
-            //Toast.makeText(this, "Accuracy: $accuracy%", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Accuracy: $accuracy%", Toast.LENGTH_SHORT).show()
 
             // 跳轉到 Quiz_History 頁面
-            val intent = Intent(this, Quiz_History::class.java)
-            startActivity(intent)
+            /*val intent = Intent(this, Quiz_History::class.java)
+            startActivity(intent)*/
         }
     }
 }

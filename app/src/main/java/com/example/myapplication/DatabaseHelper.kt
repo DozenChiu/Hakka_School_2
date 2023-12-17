@@ -109,7 +109,6 @@ class DatabaseHelper(private val context: Context) :
     fun getQuizQuestions(): List<Question> {
         val quizQuestions = mutableListOf<Question>()
 
-        // 選取 Listen_1 的十題
         val columnNo = "No"
         val minNoValue = 10
         val cursorListen1 = database?.rawQuery("SELECT * FROM Listen_1 WHERE $columnNo < $minNoValue ORDER BY RANDOM() LIMIT 5", null)
@@ -129,7 +128,6 @@ class DatabaseHelper(private val context: Context) :
             }
         }
 
-        // 選取 Listen_2 的十題
         val cursorListen2 = database?.rawQuery("SELECT * FROM Listen_2 ORDER BY RANDOM() LIMIT 5", null)
         cursorListen2?.use {
             while (it.moveToNext()) {
@@ -147,6 +145,22 @@ class DatabaseHelper(private val context: Context) :
             }
         }
 
+        val cursorListen3 = database?.rawQuery("SELECT * FROM Reading ORDER BY RANDOM() LIMIT 5", null)
+        cursorListen3?.use {
+            while (it.moveToNext()) {
+                val question = Question(
+                    it.getInt(it.getColumnIndex("No")),
+                    it.getString(it.getColumnIndex("Questions")),
+                    it.getString(it.getColumnIndex("Option_1")),
+                    it.getString(it.getColumnIndex("Option_2")),
+                    it.getString(it.getColumnIndex("Option_3")),
+                    it.getString(it.getColumnIndex("Answer")),
+                    4,
+                    ""
+                )
+                quizQuestions.add(question)
+            }
+        }
         return quizQuestions
     }
     // 目前還沒需要建立其他資料庫

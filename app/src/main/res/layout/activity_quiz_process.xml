@@ -12,8 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="20dp"
         android:clipToPadding="false"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:background="@color/anti_flash_white"/>
 
     <Button
         android:id="@+id/submitQuizButton"
