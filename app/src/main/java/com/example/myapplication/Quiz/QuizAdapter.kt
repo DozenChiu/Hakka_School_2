@@ -61,63 +61,124 @@ class QuizAdapter(val questions: List<Question>) :
             holder.option3Button.text = "3"
 
             // 其他你已經有的程式碼...
-
-            val questionNumber = currentQuestion.number
-            val optionNumber = 1 // 假設這是選項1
-            val imageName = "listen1_${questionNumber}_$optionNumber"
-            val resourceId = holder.itemView.context.resources.getIdentifier(
-                imageName,
-                "drawable",
-                holder.itemView.context.packageName
-            )
-
-            if (resourceId != 0) {
-                val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId)
-                holder.option1Button.setCompoundDrawablesWithIntrinsicBounds(
-                    drawable,
-                    null,
-                    null,
-                    null
+            if ( holder.tableInfoTextView.text == "Current table: Listen_1") {
+                val questionNumber = currentQuestion.number
+                val optionNumber = 1 // 假設這是選項1
+                val imageName = "listen1_${questionNumber}_$optionNumber"
+                val resourceId = holder.itemView.context.resources.getIdentifier(
+                    imageName,
+                    "drawable",
+                    holder.itemView.context.packageName
                 )
-                holder.option1Button.text = "1" // 設置文字為空字串
-            }
 
-            val optionNumber2 = 2 // 假設這是選項2
-            val imageName2 = "listen1_${questionNumber}_$optionNumber2"
-            val resourceId2 = holder.itemView.context.resources.getIdentifier(
-                imageName2,
-                "drawable",
-                holder.itemView.context.packageName
-            )
+                if (resourceId != 0) {
+                    val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId)
+                    holder.option1Button.setCompoundDrawablesWithIntrinsicBounds(
+                        drawable,
+                        null,
+                        null,
+                        null
+                    )
+                    holder.option1Button.text = "1" // 設置文字為空字串
+                }
 
-            if (resourceId2 != 0) {
-                val drawable2 = ContextCompat.getDrawable(holder.itemView.context, resourceId2)
-                holder.option2Button.setCompoundDrawablesWithIntrinsicBounds(
-                    drawable2,
-                    null,
-                    null,
-                    null
+                val optionNumber2 = 2 // 假設這是選項2
+                val imageName2 = "listen1_${questionNumber}_$optionNumber2"
+                val resourceId2 = holder.itemView.context.resources.getIdentifier(
+                    imageName2,
+                    "drawable",
+                    holder.itemView.context.packageName
                 )
-                holder.option2Button.text = "2" // 設置文字為空字串
-            }
 
-            val optionNumber3 = 3 // 假設這是選項3
-            val imageName3 = "listen1_${questionNumber}_$optionNumber3"
-            val resourceId3 = holder.itemView.context.resources.getIdentifier(
-                imageName3,
-                "drawable",
-                holder.itemView.context.packageName
-            )
+                if (resourceId2 != 0) {
+                    val drawable2 = ContextCompat.getDrawable(holder.itemView.context, resourceId2)
+                    holder.option2Button.setCompoundDrawablesWithIntrinsicBounds(
+                        drawable2,
+                        null,
+                        null,
+                        null
+                    )
+                    holder.option2Button.text = "2" // 設置文字為空字串
+                }
 
-            if (resourceId3 != 0) {
-                val drawable3 = ContextCompat.getDrawable(holder.itemView.context, resourceId3)
-                holder.option3Button.setCompoundDrawablesWithIntrinsicBounds(
-                    drawable3,
-                    null,
-                    null,
-                    null
+                val optionNumber3 = 3 // 假設這是選項3
+                val imageName3 = "listen1_${questionNumber}_$optionNumber3"
+                val resourceId3 = holder.itemView.context.resources.getIdentifier(
+                    imageName3,
+                    "drawable",
+                    holder.itemView.context.packageName
                 )
-                holder.option3Button.text = "3" // 設置文字為空字串
+
+                if (resourceId3 != 0) {
+                    val drawable3 = ContextCompat.getDrawable(holder.itemView.context, resourceId3)
+                    holder.option3Button.setCompoundDrawablesWithIntrinsicBounds(
+                        drawable3,
+                        null,
+                        null,
+                        null
+                    )
+                    holder.option3Button.text = "3" // 設置文字為空字串
+                }
+                else {
+                    val questionNumber = currentQuestion.number
+                    val optionNumber = 1 // 假設這是選項1
+                    val imageName = "listen2_${questionNumber}_$optionNumber"
+                    val resourceId = holder.itemView.context.resources.getIdentifier(
+                        imageName,
+                        "drawable",
+                        holder.itemView.context.packageName
+                    )
+
+                    if (resourceId != 0) {
+                        val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId)
+                        holder.option1Button.setCompoundDrawablesWithIntrinsicBounds(
+                            drawable,
+                            null,
+                            null,
+                            null
+                        )
+                        holder.option1Button.text = "1" // 設置文字為空字串
+                    }
+
+                    val optionNumber2 = 2 // 假設這是選項2
+                    val imageName2 = "listen2_${questionNumber}_$optionNumber2"
+                    val resourceId2 = holder.itemView.context.resources.getIdentifier(
+                        imageName2,
+                        "drawable",
+                        holder.itemView.context.packageName
+                    )
+
+                    if (resourceId2 != 0) {
+                        val drawable2 = ContextCompat.getDrawable(holder.itemView.context, resourceId2)
+                        holder.option2Button.setCompoundDrawablesWithIntrinsicBounds(
+                            drawable2,
+                            null,
+                            null,
+                            null
+                        )
+                        holder.option2Button.text = "2" // 設置文字為空字串
+                    }
+
+                    val optionNumber3 = 3 // 假設這是選項3
+                    val imageName3 = "listen2_${questionNumber}_$optionNumber3"
+                    val resourceId3 = holder.itemView.context.resources.getIdentifier(
+                        imageName3,
+                        "drawable",
+                        holder.itemView.context.packageName
+                    )
+
+                    if (resourceId3 != 0) {
+                        val drawable3 =
+                            ContextCompat.getDrawable(holder.itemView.context, resourceId3)
+                        holder.option3Button.setCompoundDrawablesWithIntrinsicBounds(
+                            drawable3,
+                            null,
+                            null,
+                            null
+                        )
+                        holder.option3Button.text = "3" // 設置文字為空字串
+                    }
+                }
             }
         }
 
@@ -137,31 +198,35 @@ class QuizAdapter(val questions: List<Question>) :
             //updateButtonState(holder, currentQuestion)
             val questionNumber = currentQuestion.number
             val optionNumber = 1// 這裡假設這是選項1
-            val imageName = "listen1_${questionNumber}_$optionNumber"
+            /*val imageName = "listen1_${questionNumber}_$optionNumber"
             val resourceId = holder.itemView.context.resources.getIdentifier(imageName, "drawable", holder.itemView.context.packageName)
 
             if (resourceId != 0) {
                 val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId)
                 holder.option1Button.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null)
-            }
+            }*/
 
             val optionNumber2 = 2// 這裡假設這是選項1
-            val imageName2 = "listen1_${questionNumber}_$optionNumber2"
+           /* val imageName2 = "listen1_${questionNumber}_$optionNumber2"
             val resourceId2 = holder.itemView.context.resources.getIdentifier(imageName2, "drawable", holder.itemView.context.packageName)
 
             if (resourceId2 != 0) {
                 val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId2)
                 holder.option2Button.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null)
-            }
+            }*/
 
             val optionNumber3 = 3// 這裡假設這是選項1
-            val imageName3 = "listen1_${questionNumber}_$optionNumber3"
+            /*val imageName3 = "listen1_${questionNumber}_$optionNumber3"
             val resourceId3 = holder.itemView.context.resources.getIdentifier(imageName3, "drawable", holder.itemView.context.packageName)
 
             if (resourceId3 != 0) {
                 val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId3)
                 holder.option3Button.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null)
-            }
+            }*/
+            // 清除圖片和選項
+            holder.option1Button.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            holder.option2Button.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            holder.option3Button.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
         }
         holder.option1Button.setOnClickListener {
             handleOptionClick(holder, position, currentQuestion.option1)
@@ -172,36 +237,38 @@ class QuizAdapter(val questions: List<Question>) :
         holder.option3Button.setOnClickListener {
             handleOptionClick(holder, position, currentQuestion.option3)
         }
-        holder.playButton.setOnClickListener {
-            val questionNumber = currentQuestion.number // 取得當前題目的編號
+        if ( holder.tableInfoTextView.text != "Current table: Reading" ) {
+            holder.playButton.setOnClickListener {
+                val questionNumber = currentQuestion.number // 取得當前題目的編號
 
-            //val audioFileName = "Lis01/${String.format("%02d", questionNumber)}--1.wav" // 動態建構音頻檔案路徑
-            var audioFileName = "Lis01/01--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
-            if ( holder.tableInfoTextView.text == "Current table: Listen_1" ) {
-                var tmp = "Lis01/01--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
-                audioFileName = tmp
-            }
-            else if ( holder.tableInfoTextView.text == "Current table: Listen_2" ) {
-                var tmp = "Lis02/02--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
-                audioFileName = tmp
-            }
-            try {
-                val assetManager = holder.itemView.context.assets
-                val assetFileDescriptor = assetManager.openFd(audioFileName)
-                val mediaPlayer = MediaPlayer()
-
-                mediaPlayer.setDataSource(assetFileDescriptor.fileDescriptor, assetFileDescriptor.startOffset, assetFileDescriptor.length)
-                mediaPlayer.prepare()
-                mediaPlayer.start()
-
-
-                // 在播放完成後釋放 MediaPlayer 資源
-                mediaPlayer.setOnCompletionListener { player ->
-                    player.release()
+                //val audioFileName = "Lis01/${String.format("%02d", questionNumber)}--1.wav" // 動態建構音頻檔案路徑
+                var audioFileName = "Lis01/01--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
+                if ( holder.tableInfoTextView.text == "Current table: Listen_1" ) {
+                    var tmp = "Lis01/01--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
+                    audioFileName = tmp
                 }
-            } catch (e: IOException) {
-                e.printStackTrace()
-                // 處理錯誤
+                else if ( holder.tableInfoTextView.text == "Current table: Listen_2" ) {
+                    var tmp = "Lis02/02--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
+                    audioFileName = tmp
+                }
+                try {
+                    val assetManager = holder.itemView.context.assets
+                    val assetFileDescriptor = assetManager.openFd(audioFileName)
+                    val mediaPlayer = MediaPlayer()
+
+                    mediaPlayer.setDataSource(assetFileDescriptor.fileDescriptor, assetFileDescriptor.startOffset, assetFileDescriptor.length)
+                    mediaPlayer.prepare()
+                    mediaPlayer.start()
+
+
+                    // 在播放完成後釋放 MediaPlayer 資源
+                    mediaPlayer.setOnCompletionListener { player ->
+                        player.release()
+                    }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                    // 處理錯誤
+                }
             }
         }
         updateButtonState(holder, currentQuestion)
