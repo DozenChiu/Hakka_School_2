@@ -1,6 +1,7 @@
 package com.example.myapplication.Quiz
 
 import android.graphics.Color
+import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
+import java.io.IOException
 
 class QuizAdapter(val questions: List<Question>) :
     RecyclerView.Adapter<QuizAdapter.QuizViewHolder>() {
@@ -22,6 +24,7 @@ class QuizAdapter(val questions: List<Question>) :
         val option1Button: Button = itemView.findViewById(R.id.option1Button)
         val option2Button: Button = itemView.findViewById(R.id.option2Button)
         val option3Button: Button = itemView.findViewById(R.id.option3Button)
+        val playButton : Button = itemView.findViewById(R.id.playSoundButton)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuizViewHolder {
@@ -168,6 +171,38 @@ class QuizAdapter(val questions: List<Question>) :
         }
         holder.option3Button.setOnClickListener {
             handleOptionClick(holder, position, currentQuestion.option3)
+        }
+        holder.playButton.setOnClickListener {
+            val questionNumber = currentQuestion.number // 取得當前題目的編號
+
+            //val audioFileName = "Lis01/${String.format("%02d", questionNumber)}--1.wav" // 動態建構音頻檔案路徑
+            var audioFileName = "Lis01/01--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
+            if ( holder.tableInfoTextView.text == "Current table: Listen_1" ) {
+                var tmp = "Lis01/01--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
+                audioFileName = tmp
+            }
+            else if ( holder.tableInfoTextView.text == "Current table: Listen_2" ) {
+                var tmp = "Lis02/02--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
+                audioFileName = tmp
+            }
+            try {
+                val assetManager = holder.itemView.context.assets
+                val assetFileDescriptor = assetManager.openFd(audioFileName)
+                val mediaPlayer = MediaPlayer()
+
+                mediaPlayer.setDataSource(assetFileDescriptor.fileDescriptor, assetFileDescriptor.startOffset, assetFileDescriptor.length)
+                mediaPlayer.prepare()
+                mediaPlayer.start()
+
+
+                // 在播放完成後釋放 MediaPlayer 資源
+                mediaPlayer.setOnCompletionListener { player ->
+                    player.release()
+                }
+            } catch (e: IOException) {
+                e.printStackTrace()
+                // 處理錯誤
+            }
         }
         updateButtonState(holder, currentQuestion)
     }
