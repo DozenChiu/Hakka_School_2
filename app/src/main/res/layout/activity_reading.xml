@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reading"
+    tools:context=".Listen.Reading"
     android:background="@color/aqua">
 
     <Button
@@ -14,6 +14,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="60dp"
         android:text="顯示答案"
+        android:fontFamily="@font/taiwan_regular"
+        android:background="@drawable/custom_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val learningButton = findViewById<Button>(R.id.learning_areaBTN)
         val quizButton = findViewById<Button>(R.id.quiz_areaBTN)
-        val traceButton = findViewById<Button>(R.id.traceBTN)
+        //val traceButton = findViewById<Button>(R.id.traceBTN)
         learningButton.setOnClickListener {
             val intent = Intent(this, Learning_Area::class.java)
             startActivity(intent)
@@ -26,9 +26,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Quiz_Area::class.java)
             startActivity(intent)
         }
+        /*
         traceButton.setOnClickListener {
             val intent = Intent(this, Trace::class.java)
             startActivity(intent)
         }
+        */
     }
 }

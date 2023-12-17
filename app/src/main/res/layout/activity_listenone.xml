@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListenOne"
+    tools:context=".Listen.ListenOne"
     android:background="@color/aqua">
 
     <ImageView
@@ -39,7 +39,10 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="60dp"
         android:text="顯示答案"
+        android:fontFamily="@font/taiwan_regular"
+        android:background="@drawable/custom_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

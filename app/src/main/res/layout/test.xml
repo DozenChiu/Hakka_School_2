@@ -31,35 +31,48 @@
                     android:id="@+id/textViewAnswer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
                     android:text="Answer: "
+                    android:fontFamily="@font/taiwan_regular"
+                    android:textColor="@color/orange"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewOption3" />
+                    app:layout_constraintTop_toBottomOf="@id/textViewOption3"
+                    />
 
                 <TextView
                     android:id="@+id/textViewOption2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Option 2: "
+                    android:fontFamily="@font/taiwan_regular"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toTopOf="@+id/textViewOption3"
                     app:layout_constraintStart_toStartOf="@+id/textViewOption3"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewOption1" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOption1"
+                    />
 
                 <TextView
                     android:id="@+id/textViewOption1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Option 1: "
+                    android:fontFamily="@font/taiwan_regular"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toTopOf="@+id/textViewOption2"
                     app:layout_constraintStart_toStartOf="@+id/textViewOption2"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewQuestion2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewQuestion2"
+                    />
 
                 <TextView
                     android:id="@+id/textViewQuestion2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Question: "
+                    android:fontFamily="@font/taiwan_regular"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toTopOf="@+id/textViewOption1"
                     app:layout_constraintStart_toStartOf="@+id/textViewOption1"
                     app:layout_constraintTop_toBottomOf="@+id/textViewNo" />
@@ -70,6 +83,9 @@
                     android:layout_height="wrap_content"
                     android:text="No: "
                     android:textStyle="bold"
+                    android:fontFamily="@font/taiwan_regular"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toTopOf="@+id/textViewQuestion2"
                     app:layout_constraintStart_toStartOf="@+id/textViewQuestion2"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -79,9 +95,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Option 3: "
+                    android:fontFamily="@font/taiwan_regular"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toTopOf="@+id/textViewAnswer"
                     app:layout_constraintStart_toStartOf="@+id/textViewAnswer"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewOption2" />
+                    app:layout_constraintTop_toBottomOf="@id/textViewOption2"
+                    />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -108,8 +128,8 @@
 
             <Switch
                 android:id="@+id/switch2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="17dp"
                 android:layout_marginEnd="17dp"
                 app:layout_constraintEnd_toEndOf="parent"
