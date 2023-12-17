@@ -119,65 +119,65 @@ class QuizAdapter(val questions: List<Question>) :
                     )
                     holder.option3Button.text = "3" // 設置文字為空字串
                 }
-                else {
-                    val questionNumber = currentQuestion.number
-                    val optionNumber = 1 // 假設這是選項1
-                    val imageName = "listen2_${questionNumber}_$optionNumber"
-                    val resourceId = holder.itemView.context.resources.getIdentifier(
-                        imageName,
-                        "drawable",
-                        holder.itemView.context.packageName
+            }
+            else {
+                val questionNumber = currentQuestion.number
+                val optionNumber = 1 // 假設這是選項1
+                val imageName = "listen2_${questionNumber}_$optionNumber"
+                val resourceId = holder.itemView.context.resources.getIdentifier(
+                    imageName,
+                    "drawable",
+                    holder.itemView.context.packageName
+                )
+
+                if (resourceId != 0) {
+                    val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId)
+                    holder.option1Button.setCompoundDrawablesWithIntrinsicBounds(
+                        drawable,
+                        null,
+                        null,
+                        null
                     )
+                    holder.option1Button.text = "1" // 設置文字為空字串
+                }
 
-                    if (resourceId != 0) {
-                        val drawable = ContextCompat.getDrawable(holder.itemView.context, resourceId)
-                        holder.option1Button.setCompoundDrawablesWithIntrinsicBounds(
-                            drawable,
-                            null,
-                            null,
-                            null
-                        )
-                        holder.option1Button.text = "1" // 設置文字為空字串
-                    }
+                val optionNumber2 = 2 // 假設這是選項2
+                val imageName2 = "listen2_${questionNumber}_$optionNumber2"
+                val resourceId2 = holder.itemView.context.resources.getIdentifier(
+                    imageName2,
+                    "drawable",
+                    holder.itemView.context.packageName
+                )
 
-                    val optionNumber2 = 2 // 假設這是選項2
-                    val imageName2 = "listen2_${questionNumber}_$optionNumber2"
-                    val resourceId2 = holder.itemView.context.resources.getIdentifier(
-                        imageName2,
-                        "drawable",
-                        holder.itemView.context.packageName
+                if (resourceId2 != 0) {
+                    val drawable2 = ContextCompat.getDrawable(holder.itemView.context, resourceId2)
+                    holder.option2Button.setCompoundDrawablesWithIntrinsicBounds(
+                        drawable2,
+                        null,
+                        null,
+                        null
                     )
+                    holder.option2Button.text = "2" // 設置文字為空字串
+                }
 
-                    if (resourceId2 != 0) {
-                        val drawable2 = ContextCompat.getDrawable(holder.itemView.context, resourceId2)
-                        holder.option2Button.setCompoundDrawablesWithIntrinsicBounds(
-                            drawable2,
-                            null,
-                            null,
-                            null
-                        )
-                        holder.option2Button.text = "2" // 設置文字為空字串
-                    }
+                val optionNumber3 = 3 // 假設這是選項3
+                val imageName3 = "listen2_${questionNumber}_$optionNumber3"
+                val resourceId3 = holder.itemView.context.resources.getIdentifier(
+                    imageName3,
+                    "drawable",
+                    holder.itemView.context.packageName
+                )
 
-                    val optionNumber3 = 3 // 假設這是選項3
-                    val imageName3 = "listen2_${questionNumber}_$optionNumber3"
-                    val resourceId3 = holder.itemView.context.resources.getIdentifier(
-                        imageName3,
-                        "drawable",
-                        holder.itemView.context.packageName
+                if (resourceId3 != 0) {
+                    val drawable3 =
+                        ContextCompat.getDrawable(holder.itemView.context, resourceId3)
+                    holder.option3Button.setCompoundDrawablesWithIntrinsicBounds(
+                        drawable3,
+                        null,
+                        null,
+                        null
                     )
-
-                    if (resourceId3 != 0) {
-                        val drawable3 =
-                            ContextCompat.getDrawable(holder.itemView.context, resourceId3)
-                        holder.option3Button.setCompoundDrawablesWithIntrinsicBounds(
-                            drawable3,
-                            null,
-                            null,
-                            null
-                        )
-                        holder.option3Button.text = "3" // 設置文字為空字串
-                    }
+                    holder.option3Button.text = "3" // 設置文字為空字串
                 }
             }
         }
