@@ -26,13 +26,34 @@ class ListenAdapter(private val context: Context, private val cursor: Cursor?, p
     override fun onBindViewHolder(holder: ListenViewHolder, position: Int) {
         cursor?.moveToPosition(position)    // 移動 Cursor 到指定位置
         // 將資料設定到 ViewHolder 的 TextView 中
-        holder.noTextView.text = "No: " + cursor?.getInt(cursor.getColumnIndex("No")).toString()
-        holder.questionTextView.text = "Question: " + cursor?.getString(cursor.getColumnIndex("Questions"))
-        holder.option1TextView.text = "Option 1: " + cursor?.getString(cursor.getColumnIndex("Option_1"))
-        holder.option2TextView.text = "Option 2: " + cursor?.getString(cursor.getColumnIndex("Option_2"))
-        holder.option3TextView.text = "Option 3: " + cursor?.getString(cursor.getColumnIndex("Option_3"))
-        holder.answerTextView.text = "Answer : " + cursor?.getString(cursor.getColumnIndex("Answer"))
+        holder.noTextView.apply {
+            text = "No: " + cursor?.getInt(cursor.getColumnIndex("No")).toString()
+            textSize = 30f
+        }
+        holder.questionTextView.apply {
+            text = "Question: " + cursor?.getString(cursor.getColumnIndex("Questions"))
+            textSize = 30f // 设置字体大小为 20sp
+        }
 
+        holder.option1TextView.apply {
+            text = "Option 1: " + cursor?.getString(cursor.getColumnIndex("Option_1"))
+            textSize = 30f // 设置字体大小为 16sp
+        }
+
+        holder.option2TextView.apply {
+            text = "Option 2: " + cursor?.getString(cursor.getColumnIndex("Option_2"))
+            textSize = 30f // 设置字体大小为 16sp
+        }
+
+        holder.option3TextView.apply {
+            text = "Option 3: " + cursor?.getString(cursor.getColumnIndex("Option_3"))
+            textSize = 30f // 设置字体大小为 16sp
+        }
+
+        holder.answerTextView.apply {
+            text = "Answer : " + cursor?.getString(cursor.getColumnIndex("Answer"))
+            textSize = 30f // 设置字体大小为 18sp
+        }
         holder.option1TextView.visibility = View.GONE
         holder.option2TextView.visibility = View.GONE
         holder.option3TextView.visibility = View.GONE

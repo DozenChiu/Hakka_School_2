@@ -21,10 +21,11 @@
         app:queryHint="Search Here ..."
         app:iconifiedByDefault="false"
         />
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="300dp"
-        android:layout_height="48dp"
+        android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="72dp"
         android:background="@color/white" />

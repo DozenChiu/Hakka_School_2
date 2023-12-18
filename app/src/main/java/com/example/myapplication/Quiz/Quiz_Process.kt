@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.DatabaseHelper
 import com.example.myapplication.R
+import com.example.myapplication.vocab.Learning_Vocab
 
 class Quiz_Process : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -34,7 +35,9 @@ class Quiz_Process : AppCompatActivity() {
             val accuracy = (correctAnswers.toDouble() / totalQuestions) * 100
             //val accuracy = correctAnswers
             Toast.makeText(this, "Accuracy: $accuracy%", Toast.LENGTH_SHORT).show()
-
+            val intent = Intent(this, Quiz_Area::class.java)
+            intent.putExtra("accuracy", accuracy)
+            startActivity(intent)
             // 跳轉到 Quiz_History 頁面
             /*val intent = Intent(this, Quiz_History::class.java)
             startActivity(intent)*/

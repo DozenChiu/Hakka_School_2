@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/learning_areaBTN"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:background="@drawable/custom_button"
         android:text="學習區"
         android:textAllCaps="false"
@@ -26,8 +26,8 @@
 
     <Button
         android:id="@+id/quiz_areaBTN"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:background="@drawable/custom_button"
         android:text="測驗區"
         android:textAllCaps="false"
@@ -35,10 +35,10 @@
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
+        app:layout_constraintVertical_bias="0.824" />
     <!--
     <Button
         android:id="@+id/traceBTN"

@@ -30,8 +30,8 @@
 
     <Button
         android:id="@+id/startquizBTN"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
         android:background="@drawable/custom_button"
         android:text="開始測驗"
         android:textAllCaps="false"
@@ -43,4 +43,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.500" />
+
+    <TextView
+        android:id="@+id/Score"
+        android:layout_width="278dp"
+        android:layout_height="142dp"
+        android:text="Score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204" />
 </androidx.constraintlayout.widget.ConstraintLayout>

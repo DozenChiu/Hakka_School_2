@@ -240,7 +240,7 @@ class QuizAdapter(val questions: List<Question>) :
         if ( holder.tableInfoTextView.text != "Current table: Reading" ) {
             holder.playButton.setOnClickListener {
                 val questionNumber = currentQuestion.number // 取得當前題目的編號
-
+                var mediaPlayer = MediaPlayer()
                 //val audioFileName = "Lis01/${String.format("%02d", questionNumber)}--1.wav" // 動態建構音頻檔案路徑
                 var audioFileName = "Lis01/01--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
                 if ( holder.tableInfoTextView.text == "Current table: Listen_1" ) {
@@ -251,10 +251,14 @@ class QuizAdapter(val questions: List<Question>) :
                     var tmp = "Lis02/02--${String.format("%d", questionNumber)}.wav" // 動態建構音頻檔案路徑
                     audioFileName = tmp
                 }
+                if(mediaPlayer != null && mediaPlayer.isPlaying){
+                    mediaPlayer.stop()
+                    mediaPlayer.release()
+                }
                 try {
                     val assetManager = holder.itemView.context.assets
                     val assetFileDescriptor = assetManager.openFd(audioFileName)
-                    val mediaPlayer = MediaPlayer()
+
 
                     mediaPlayer.setDataSource(assetFileDescriptor.fileDescriptor, assetFileDescriptor.startOffset, assetFileDescriptor.length)
                     mediaPlayer.prepare()

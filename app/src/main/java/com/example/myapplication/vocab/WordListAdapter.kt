@@ -68,8 +68,11 @@ class WordListAdapter(private val context: Context, private var cursor: Cursor?)
         fun bind(cursor: Cursor?) {
             binding.apply {
                 textVocab.text = cursor?.getString(cursor.getColumnIndex("Word")) ?: ""
+                textVocab.textSize = 30.toFloat()
                 textSymbol.text = cursor?.getString(cursor.getColumnIndex("Symbol")) ?: ""
+                textSymbol.textSize = 30.toFloat()
                 textChi.text = cursor?.getString(cursor.getColumnIndex("Meaning")) ?: ""
+                textChi.textSize = 30.toFloat()
             }
         }
     }

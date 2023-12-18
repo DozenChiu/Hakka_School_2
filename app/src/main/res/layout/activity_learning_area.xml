@@ -31,8 +31,8 @@
 
     <Button
         android:id="@+id/learning_vocabBTN"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:background="@drawable/custom_button"
         android:text="詞彙表"
         android:textAllCaps="false"
@@ -47,8 +47,8 @@
 
     <Button
         android:id="@+id/questionbankBTN"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:background="@drawable/custom_button"
         android:text="題庫區"
         android:textAllCaps="false"
